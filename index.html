@@ -1,0 +1,383 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+    <title>Resume | | Rohullah Ahmadi</title>
+  </head>
+  <body class="overflow-hidden">
+    <button
+      class="navopen fixed p-4 flex justify-center z-100 items-center w-max h-max text-xl top-4 left-2 transition-all text-white cursor-pointer duration-400">
+      <i class="fas fa-bars"></i>
+    </button>
+    <!-- loader -->
+    <section
+      id="loeader"
+      class="absolute transition-all duration-1000 top-0 w-full z-100 h-screen bg-gradient-to-bl from-black to-purple-800 p-8 flex flex-col justify-center items-center">
+      <div class="relative flex justify-center items-center">
+        <span
+          class="relative w-38 h-38 flex justify-center items-center border-r-transparent p-4 rounded-full border-2 animate-spin border-white">
+        </span>
+        <i class="fas fa-code text-8xl absolute"></i>
+        <h1 class="absolute top-46 w-max text-2xl text-white">Website is loading....</h1>
+      </div>
+    </section>
+    <header class="w-[100%] overflow-hidden h-screen headerbg">
+      <!-- navbar-->
+      <nav
+        class="transition-all backdrop-blur-md md:backdrop-blur-none duration-500 h-screen w-max px-2 py-4 flex flex-col justify-between items-center z-10 bg-purple-250 fixed top-0 left-0 text-white translate-x-[-150px]">
+        <button class="closenav hover:scale-120 transition-all">
+          <i class="fas fa-chevron-left hover:drop-shadow-white drop-shadow-sm cursor-pointer"></i>
+        </button>
+        <ul class="flex flex-col gap-8 text-lg w-full">
+          <li>
+            <a
+              onclick="homeopen()"
+              id="home"
+              class="after:content='' after:w-1 after:h-full after:transition-all after:bg-white after:flex after:absolute after:top-0 after:right-0 relative p-4 after:rounded-l-lg after:m-auto"
+              ><i class="fa-regular fa-home"></i
+            ></a>
+          </li>
+
+          <li>
+            <a
+              onclick="openabout()"
+              id="about"
+              class="after:content='' after:w-1 hover:after:h-full after:h-0 after:transition-all after:bg-white after:flex after:absolute after:top-0 after:right-0 relative p-4 after:rounded-l-lg after:m-auto"
+              ><i class="fa-regular fa-user"></i
+            ></a>
+          </li>
+
+          <li>
+            <a
+              onclick="openprojects()"
+              class="after:content='' after:w-1 hover:after:h-full after:h-0 after:transition-all after:bg-white after:flex after:absolute after:top-0 after:right-0 relative p-4 after:rounded-l-lg after:m-auto"
+              ><i class="fa-regular fa-clipboard"></i
+            ></a>
+          </li>
+
+          <li>
+            <a
+              onclick="openservice()"
+              class="after:content='' after:w-1 hover:after:h-full after:h-0 after:transition-all after:bg-white after:flex after:absolute after:top-0 after:right-0 relative p-4 after:rounded-l-lg after:m-auto"
+              ><i class="fas fa-users"></i
+            ></a>
+          </li>
+
+          <li>
+            <a
+              onclick="opencontact()"
+              class="after:content='' after:w-1 hover:after:h-full after:h-0 after:transition-all after:bg-white after:flex after:absolute after:top-0 after:right-0 relative p-4 after:rounded-l-lg after:m-auto"
+              ><i class="fa-regular fa-envelope"></i
+            ></a>
+          </li>
+        </ul>
+        <i class="fa-regular fa-sun cursor-pointer"></i>
+      </nav>
+
+      <!-- hero section -->
+      <section class="w-full h-full flex flex-col gap-4 justify-center items-center">
+        <div class="flex flex-col gap-3 text-white relative text-center">
+          <p class="text-2xl w-full absolute left-12 text-left top-[-30px]">I am</p>
+          <h1 class="md:text-8xl text-6xl font-[docs]">Rohullah Ahmadi</h1>
+          <p class="md:text-2xl text-xl text-center">Frontend developer</p>
+        </div>
+        <span
+          class="flex gap-6 p-4 rounded-xl text-white text-xl backdrop-blur-md bg-purple-200/10">
+          <a href="https://wa.me/93749542078"
+            ><i class="fab fa-whatsapp hover:text-purple-600 transition-all"></i
+          ></a>
+          <a href="https://www.instagram.com/sad_prince_life/"
+            ><i class="fab fa-instagram hover:text-purple-600 transition-all"></i
+          ></a>
+          <a href="https://github.com/Rohullah-Coder"
+            ><i class="fab fa-github hover:text-purple-600 transition-all"></i
+          ></a>
+          <a href="https://www.threads.net/@sad_prince_life/"
+            ><i class="fab fa-threads hover:text-purple-600 transition-all"></i
+          ></a>
+        </span>
+      </section>
+    </header>
+
+    <!-- about section -->
+    <section
+      class="about absolute top-0 w-[100%] h-full duration-700 bg-gradient-to-bl from-black to-purple-800 p-8 flex justify-center items-center hidden">
+      <div
+        class="md:w-[70vw] w-[100vw] md:h-[80vh] h-full bg-white/10 md:overflow-hidden overflow-y-scroll rounded-xl relative items-center backdrop-blur-xl flex flex-col py-12 px-2 md:gap-8">
+        <div
+          class="flex text-center justify-center md:text-8xl text-2xl font-bold font-[kodack] text-purple-700 w-full abouttitle opacity-0">
+          <p>About Me</p>
+        </div>
+        <img
+          src="./aboutimg.png"
+          class="h-full md:absolute z-2 opacity-0 aboutimage md:w-auto w-full" />
+        <article
+          class="md:absolute right-0 left-0 bottom-0 w-[100%] p-8 z-10 flex flex-col md:flex-row rounded-sm md:rounded-none bg-black/80 aboutskills opacity-0">
+          <div class="flex flex-col gap-4 text-purple-600">
+            <h1
+              class="text-2xl font-bold before:content='' before:block before:w-1 before:h-full before:bg-purple-600 before:left-[-10px] before:absolute relative">
+              Explore throw my skills
+            </h1>
+            <p class="md:max-w-[60ch] w-full text-sm">
+              My skills combine creativity, problem solving, technical knowledge, adaptability,
+              teamwork, and continuous learning to deliver reliable, efficient, high quality results
+            </p>
+          </div>
+          <div class="flex gap-4 flex-col text-white md:px-20 p-4 justify-between w-full">
+            <span class="flex flex-col md:flex-row gap-6 items-center w-ful justify-between">
+              <h1 class="text-xl">Basic Frontend</h1>
+              <div class="md:w-70 w-full h-3 rounded-full bg-white flex">
+                <span class="w-[97%] h-full bg-purple-600 rounded-full"></span>
+              </div>
+            </span>
+
+            <span class="flex gap-6 flex-col md:flex-row items-center w-ful justify-between">
+              <h1 class="text-xl">Tailwind</h1>
+              <div class="md:w-70 w-full h-3 rounded-full bg-white flex">
+                <span class="w-[80%] h-full bg-purple-600 rounded-full"></span>
+              </div>
+            </span>
+
+            <span class="flex gap-6 flex-col md:flex-row items-center w-ful justify-between">
+              <h1 class="text-xl">React</h1>
+              <div class="md:w-70 w-full h-3 rounded-full bg-white flex">
+                <span class="w-[0%] h-full bg-purple-600 rounded-full"></span>
+              </div>
+            </span>
+
+            <span class="flex gap-6 flex-col md:flex-row items-center w-ful justify-between">
+              <h1 class="text-xl">React Native</h1>
+              <div class="md:w-70 w-full h-3 rounded-full bg-white flex">
+                <span class="w-[0%] h-full bg-purple-600 rounded-full"></span>
+              </div>
+            </span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- projects section -->
+    <section
+      class="project absolute top-0 w-full h-screen duration-700 bg-gradient-to-bl from-black to-purple-800 md:p-14 p-4 flex justify-center items-center hidden">
+      <div
+        class="w-full md:h-full backdrop-blur-xl bg-white/10 rounded-xl flex flex-col justify-center items-center">
+        <div class="flex flex-col justify-center items-center gap-4 md:p-8 p-2 opacity-0 title">
+          <h1 class="md:text-4xl text-2xl font-[kodack] font-bold text-purple-600">
+            Explore the project you like!
+          </h1>
+          <p class="md:max-w-[70ch] w-full text-center text-purple-300 md:text-lg opacity-0 title1">
+            My projects showcase creativity, technical skills, and problem solving, focusing on
+            clean design, efficient code, and user friendly solutions that solve real world
+            problems, demonstrate innovation, and reflect continuous learning, growth, and
+            dedication to quality development.
+          </p>
+        </div>
+        <div class="slide flex w-full items-center justify-between p-4">
+          <i class="fas fa-chevron-left text-white text-2xl cursor-pointer"></i>
+          <div class="flex w gap-4 md:h-full w-full md:p-4 p-1 overflow-x-scroll scroll-smooth">
+            <article
+              class="min-w-90 h-50 rounded-md overflow-hidden relative bg-white flex group opacity-0 pro0">
+              <img src="./bg.png" class="w-full h-full absolute z-0" alt="" />
+              <div
+                class="z-10 group-hover:h-full group-hover:opacity-100 transition-all duration-700 text-white w-full h-0 opacity-0 flex flex-col gap-2 justify-center items-center px-12 backdrop-blur-md">
+                <h1 class="text-2xl text-purple-400">this is the title</h1>
+                <p class="text-sm">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem porro sed nostrum
+                </p>
+                <a href="#" class="text-sm px-4 py-1 border rounded-full">Visit Website</a>
+              </div>
+            </article>
+
+            <article
+              class="min-w-90 h-50 rounded-md overflow-hidden relative bg-white flex group opacity-0 pro1">
+              <img src="./bg.png" class="w-full h-full absolute z-0" alt="" />
+              <div
+                class="z-10 group-hover:h-full group-hover:opacity-100 transition-all duration-700 text-white w-full h-0 opacity-0 flex flex-col gap-2 justify-center items-center px-12 backdrop-blur-md">
+                <h1 class="text-2xl text-purple-400">this is the title</h1>
+                <p class="text-sm">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem porro sed nostrum
+                </p>
+                <a href="#" class="text-sm px-4 py-1 border rounded-full">Visit Website</a>
+              </div>
+            </article>
+
+            <article
+              class="min-w-90 h-50 rounded-md overflow-hidden relative bg-white flex group opacity-0 pro2">
+              <img src="./bg.png" class="w-full h-full absolute z-0" alt="" />
+              <div
+                class="z-10 group-hover:h-full group-hover:opacity-100 transition-all duration-700 text-white w-full h-0 opacity-0 flex flex-col gap-2 justify-center items-center px-12 backdrop-blur-md">
+                <h1 class="text-2xl text-purple-400">this is the title</h1>
+                <p class="text-sm">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem porro sed nostrum
+                </p>
+                <a href="#" class="text-sm px-4 py-1 border rounded-full">Visit Website</a>
+              </div>
+            </article>
+
+            <article
+              class="min-w-90 h-50 rounded-md overflow-hidden relative bg-white flex group opacity-0 pro3">
+              <img src="./bg.png" class="w-full h-full absolute z-0" alt="" />
+              <div
+                class="z-10 group-hover:h-full group-hover:opacity-100 transition-all duration-700 text-white w-full h-0 opacity-0 flex flex-col gap-2 justify-center items-center px-12 backdrop-blur-md">
+                <h1 class="text-2xl text-purple-400">this is the title</h1>
+                <p class="text-sm">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem porro sed nostrum
+                </p>
+                <a href="#" class="text-sm px-4 py-1 border rounded-full">Visit Website</a>
+              </div>
+            </article>
+
+            <article
+              class="min-w-90 h-50 rounded-md overflow-hidden relative bg-white flex group opacity-0 pro4">
+              <img src="./bg.png" class="w-full h-full absolute z-0" alt="" />
+              <div
+                class="z-10 group-hover:h-full group-hover:opacity-100 transition-all duration-700 text-white w-full h-0 opacity-0 flex flex-col gap-2 justify-center items-center px-12 backdrop-blur-md">
+                <h1 class="text-2xl text-purple-400">this is the title</h1>
+                <p class="text-sm">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem porro sed nostrum
+                </p>
+                <a href="#" class="text-sm px-4 py-1 border rounded-full">Visit Website</a>
+              </div>
+            </article>
+
+            <article
+              class="min-w-90 h-50 rounded-md overflow-hidden relative bg-white flex group opacity-0 pro5">
+              <img src="./bg.png" class="w-full h-full absolute z-0" alt="" />
+              <div
+                class="z-10 group-hover:h-full group-hover:opacity-100 transition-all duration-700 text-white w-full h-0 opacity-0 flex flex-col gap-2 justify-center items-center px-12 backdrop-blur-md">
+                <h1 class="text-2xl text-purple-400">this is the title</h1>
+                <p class="text-sm">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem porro sed nostrum
+                </p>
+                <a href="#" class="text-sm px-4 py-1 border rounded-full">Visit Website</a>
+              </div>
+            </article>
+
+            <article
+              class="min-w-90 h-50 rounded-md overflow-hidden relative bg-white flex group opacity-0 pro6">
+              <img src="./bg.png" class="w-full h-full absolute z-0" alt="" />
+              <div
+                class="z-10 group-hover:h-full group-hover:opacity-100 transition-all duration-700 text-white w-full h-0 opacity-0 flex flex-col gap-2 justify-center items-center px-12 backdrop-blur-md">
+                <h1 class="text-2xl text-purple-400">this is the title</h1>
+                <p class="text-sm">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem porro sed nostrum
+                </p>
+                <a href="#" class="text-sm px-4 py-1 border rounded-full">Visit Website</a>
+              </div>
+            </article>
+          </div>
+          <i class="fas fa-chevron-right text-white text-2xl cursor-pointer"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- services -->
+    <section
+      class="services absolute top-0 w-full h-full duration-700 bg-gradient-to-bl from-black to-purple-800 md:p-34 md:px-44 p-4 flex flex-col justify-center items-center hidden">
+      <div
+        class="w-full h-full flex-col md:px-16 md:py-8 p-4 gap-10 bg-white/10 rounded-md flex relative text-center items-center md:overflow-visible overflow-x-scroll">
+        <h1 class="text-5xl font-[kodack] font-bold text-purple-700 opacity-0 title">
+          What will I offer You?
+        </h1>
+        <div
+          class="flex flex-col md:flex-row justify-between gap-8 w-full md:px-20 px-4 py-4 h-full absolute top-40">
+          <article
+            class="w-full h-80 flex flex-col gap-4 items-center p-4 rounded-md backdrop-blur-md bg-white/20 title opacity-0">
+            <i class="fas fa-code text-4xl"></i>
+            <h1 class="text-xl font-bold">Frontend Development</h1>
+            <p class="text-sm">
+              Frontend development focuses on building responsive, interactive user interfaces using
+              HTML, CSS, JavaScript, and modern frameworks to deliver fast, accessible, and visually
+              engaging web experiences across devices.!
+            </p>
+          </article>
+          <article
+            class="w-full h-80 flex flex-col gap-4 items-center p-4 rounded-md backdrop-blur-md bg-white/20 title1 opacity-0">
+            <i class="fas fa-database text-4xl"></i>
+            <h1 class="text-xl font-bold">Backend Development</h1>
+            <p class="text-sm">
+              Teamwork means collaborating effectively, sharing responsibilities, respecting diverse
+              ideas, and supporting each other to achieve common goals successfully together.
+            </p>
+          </article>
+          <article
+            class="w-full h-80 flex flex-col gap-4 items-center p-4 rounded-md backdrop-blur-md bg-white/20 title2 opacity-0">
+            <i class="fab fa-app-store text-4xl"></i>
+            <h1 class="text-xl font-bold">Mobile App development</h1>
+            <p class="text-sm">
+              Mobile app development involves designing, building, and optimizing applications for
+              smartphones, focusing on performance, usability, security, and seamless user
+              experiences across Android and iOS platforms using modern tools and frameworks.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact -->
+    <section
+      class="contact absolute top-0 w-full h-full duration-700 bg-purple-950/10 md:p-34 md:px-44 p-4 flex hidden justify-center items-center">
+      <div
+        class="flex h-[70vh] bg-purple-400/20 backdrop-blur-xl rounded-xl contactbg shadow-xl shadow-black">
+        <form
+          action="#"
+          id="name"
+          class="w-full rounded-xl text-white p-8 flex flex-col gap-10 items-center justify-center">
+          <i class="fa-regular fa-user text-6xl"></i>
+          <div class="relative flex items-center title opacity-0">
+            <i class="fa-regular fa-user text-white"></i>
+            <input
+              type="text"
+              required
+              maxlength="20"
+              class="w-full z-10 px-4 py-2 peer outline-none border-b-2 text-white focus:border-purple-500 border-white valid:border-purple-500 duration-700 transition-all" />
+            <label
+              for="name"
+              class="absolute z-0 transition-all left-0 top-2 peer-focus:top-[-20px] peer-focus:text-sm peer-valid:text-sm duration-700 max-w-max peer-focus:text-purple-500 peer-valid:top-[-20px] peer-valid:text-purple-500 pl-6"
+              >Enter Your Name</label
+            >
+          </div>
+          <div class="relative flex items-center title1 opacity-0">
+            <i class="fa-regular fa-envelope text-white"></i>
+            <input
+              type="text"
+              required
+              id="email"
+              class="w-full z-10 px-4 py-2 peer outline-none border-b-2 text-white focus:border-purple-500 border-white valid:border-purple-500 duration-700 transition-all" />
+            <label
+              for="email"
+              class="absolute z-0 transition-all left-0 top-2 peer-focus:top-[-20px] peer-focus:text-sm peer-valid:text-sm duration-700 max-w-max peer-focus:text-purple-500 peer-valid:top-[-20px] peer-valid:text-purple-500 pl-6"
+              >Enter valid Email Address</label
+            >
+          </div>
+          <div class="relative flex items-center title2 opacity-0">
+            <i class="fa-regular fa-message text-white"></i>
+            <input
+              type="text"
+              id="message"
+              required
+              class="w-full px-4 py-2 peer outline-none border-b-2 text-white focus:border-purple-500 border-white valid:border-purple-500 duration-700 transition-all" />
+            <label
+              for="message"
+              class="absolute transition-all left-0 top-2 peer-focus:top-[-20px] peer-focus:text-sm peer-valid:text-sm duration-700 max-w-max peer-focus:text-purple-500 peer-valid:top-[-20px] peer-valid:text-purple-500 pl-6"
+              >Enter your message</label
+            >
+          </div>
+
+          <input
+            type="submit"
+            value="Send Message"
+            class="w-full bg-green-500 p-4 py-2 rounded-md title3 opacity-0" />
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

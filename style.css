@@ -1,0 +1,87 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+@font-face {
+  font-family: "docs";
+  src: url(./Dosis-Bold.ttf);
+}
+
+.headerbg {
+  background: linear-gradient(270deg, rgba(0, 0, 0), rgba(99, 1, 99, 0.5)), url("./bg.png");
+  background-size: cover;
+  background-position: center;
+}
+.contactbg {
+  background: linear-gradient(rgba(99, 1, 99, 0.5)), url("./contact-img.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.abouttitle {
+  animation: appeartop 0.8s 1s ease forwards;
+}
+
+.aboutimage {
+  animation: appeartop 0.8s 1.5s ease forwards;
+}
+.aboutskills {
+  animation: appeartop 0.8s 2s ease forwards;
+}
+
+.title {
+  animation: appeartop 0.8s 0.5s ease forwards;
+}
+.title1 {
+  animation: appeartop 0.8s 1s ease forwards;
+}
+.title2 {
+  animation: appeartop 0.8s 1.5s ease forwards;
+}
+.title3 {
+  animation: appeartop 0.8s 2s ease forwards;
+}
+
+@keyframes appeartop {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.pro0 {
+  animation: appearleft 0.5s 0.5s ease forwards;
+}
+.pro1 {
+  animation: appearleft 0.5s 1s ease forwards;
+}
+.pro2 {
+  animation: appearleft 0.5s 1.5s ease forwards;
+}
+.pro3 {
+  animation: appearleft 0.5s 2s ease forwards;
+}
+.pro4 {
+  animation: appearleft 0.5s 2.5s ease forwards;
+}
+.pro5 {
+  animation: appearleft 0.5s 3s ease forwards;
+}
+.pro6 {
+  animation: appearleft 0.5s 3.5s ease forwards;
+}
+
+@keyframes appearleft {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
