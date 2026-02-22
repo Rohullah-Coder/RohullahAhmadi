@@ -20,16 +20,19 @@ function openabout() {
   document.querySelector(".about").classList.toggle("hidden");
   document.querySelector(".project").classList.add("hidden");
   document.querySelector(".services").classList.add("hidden");
+  document.querySelector(".contact").classList.add("hidden");
 }
 function openprojects() {
   document.querySelector(".project").classList.toggle("hidden");
   document.querySelector(".about").classList.add("hidden");
   document.querySelector(".services").classList.add("hidden");
+  document.querySelector(".contact").classList.add("hidden");
 }
 function openservice() {
   document.querySelector(".services").classList.toggle("hidden");
   document.querySelector(".project").classList.add("hidden");
   document.querySelector(".about").classList.add("hidden");
+  document.querySelector(".contact").classList.add("hidden");
 }
 function opencontact() {
   document.querySelector(".contact").classList.toggle("hidden");
@@ -39,5 +42,3 @@ function opencontact() {
 }
 
 // form
-
-
