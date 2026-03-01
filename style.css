@@ -85,3 +85,12 @@
     opacity: 1;
   }
 }
+
+.widthfull {
+  animation: widthfull 1s 2s ease forwards;
+}
+@keyframes widthfull {
+  from {
+    width: 0;
+  }
+}

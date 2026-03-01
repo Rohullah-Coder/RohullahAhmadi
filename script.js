@@ -4,11 +4,11 @@ const nav = document.querySelector("nav");
 const closenav = document.querySelector(".closenav");
 navOpen.addEventListener("click", () => {
   nav.classList.toggle("translate-x-[-150px]");
-  navOpen.classList.toggle("hidden");
+  navOpen.classList.add("hidden");
 });
 closenav.addEventListener("click", () => {
   nav.classList.toggle("translate-x-[-150px]");
-  navOpen.classList.toggle("hidden");
+  navOpen.classList.remove("hidden");
 });
 
 const lodaer = document.querySelector("#loeader");
